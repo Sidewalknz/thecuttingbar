@@ -15,8 +15,7 @@
 .heroLogo {
   position: absolute;
   bottom: -140px;
-  left: 50%;                 /* lock to viewport center */
-  transform: translateX(320px); /* fixed offset right; tune this value to taste */
+  left: 50%;
   width: 1600px;
   height: 1200px;
   background: url("/icons/hero-logo.svg") no-repeat left bottom;
