@@ -1,0 +1,88 @@
+.hero {
+  position: relative;
+  height: 90vh; /* as requested */
+  min-height: 520px;
+  width: 100%;
+  background: var(--brand-orange);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 2rem 1rem;
+}
+
+/* Anchor to center, then push right by a fixed pixel offset so it doesn't drift */
+.heroLogo {
+  position: absolute;
+  bottom: -140px;
+  left: 50%;                 /* lock to viewport center */
+  transform: translateX(320px); /* fixed offset right; tune this value to taste */
+  width: 1600px;
+  height: 1200px;
+  background: url("/icons/hero-logo.svg") no-repeat left bottom;
+  background-size: auto 1200px;
+  z-index: 0;
+}
+
+.inner {
+  text-align: center;
+  max-width: 900px;
+  z-index: 1; /* ensures text sits above logo */
+  position: relative;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 2rem;
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ctas {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.primary {
+  background: #ffffff;
+  color: var(--foreground);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.primary:hover {
+  background: #f7f7f7;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.16);
+}
+
+.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.secondary:hover {
+  border-color: #ffffff;
+}

@@ -1,0 +1,68 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* center container */
+  padding: 1rem 2rem;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  z-index: 1000;
+
+  /* transparent with slight blur at top */
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0px);
+}
+
+.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* almost solid */
+  backdrop-filter: blur(8px); /* soft glassy effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* New wrapper inside navbar */
+.navContent {
+  width: 100%;
+  max-width: 1200px; /* keeps content from going too wide */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.navLinks a:hover {
+  color: var(--brand-orange);
+}
+
+.cta {
+  background: var(--brand-orange);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.cta:hover {
+  background: #d95820; /* darker orange on hover */
+}
