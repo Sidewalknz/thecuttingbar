@@ -88,7 +88,7 @@
 
 @media (max-width: 768px) {
   .heroLogo {
-    width: 320%;
+    width: 220%;
     left: 130%;
     bottom: -250px;
     transform: translateX(-50%);
