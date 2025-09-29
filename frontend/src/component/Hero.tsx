@@ -24,7 +24,7 @@ export default function Hero() {
           >
             Book Now
           </Link>
-          <a href="tel:+64XXXXXXXXX" className={`${styles.btn} ${styles.secondary}`}>
+          <a href="tel:03 539 0186" className={`${styles.btn} ${styles.secondary}`}>
             Call Us
           </a>
         </div>

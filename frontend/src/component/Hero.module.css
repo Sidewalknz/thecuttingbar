@@ -85,3 +85,15 @@
 .secondary:hover {
   border-color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .heroLogo {
+    width: 320%;
+    left: 130%;
+    bottom: -250px;
+    transform: translateX(-50%);
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+}
