@@ -13,64 +13,75 @@
   padding: 56px 1rem;
   max-width: 1100px;
   margin: 0 auto;
-
-  align-items: center; /* vertically centers all columns */
-  text-align: center; /* default center on mobile */
+  align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 860px) {
   .wrap {
-    grid-template-columns: 1fr 1fr 1fr; /* logo/socials | contact | attribution */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem;
-    text-align: left; /* reset default */
+    text-align: left;
   }
 }
 
 /* --- Left column --- */
+.brand {
+  text-align: center; /* ✅ keep brand + socials centered */
+}
+
 .brand .logo {
   display: block;
-  margin-bottom: 1rem;
-  color: #fff;
-  line-height: 0; /* tighter around SVG logo */
+  margin: 0 auto 1rem auto; /* ✅ center logo itself */
+  line-height: 0;
 }
 
 .socials {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center; /* center socials on mobile */
-}
-
-@media (min-width: 860px) {
-  .socials {
-    justify-content: flex-start; /* left-align socials on desktop */
-  }
+  justify-content: center; /* ✅ always center under logo */
 }
 
 .socials a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.socials a:hover {
-  text-decoration: underline;
+.socials .icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+
+.socials a:hover .icon {
+  opacity: 0.75;
 }
 
 /* --- Middle column --- */
 .contact {
-  font-style: normal; /* override <address> italics */
+  font-style: normal;
   font-size: 0.95rem;
   line-height: 1.6;
-  text-align: center; /* center on mobile */
+  text-align: center;
 }
 
 @media (min-width: 860px) {
   .contact {
-    justify-self: center; /* 🔑 centers the whole column horizontally */
-    text-align: center;   /* keep text centered in its own column */
+    justify-self: center;
+    text-align: center;
   }
+}
+
+.contact p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.4rem 0;
 }
 
 .contact a {
@@ -83,20 +94,26 @@
 }
 
 .addr {
-  margin: 0.4rem 0 0.6rem 0;
   color: rgba(255,255,255,0.85);
+}
+
+.contact .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
 }
 
 /* --- Right column --- */
 .attribution {
   font-size: 0.9rem;
   color: rgba(255,255,255,0.75);
-  text-align: center; /* center on mobile */
+  text-align: center;
 }
 
 @media (min-width: 860px) {
   .attribution {
-    text-align: right; /* right-align on desktop */
+    text-align: right;
   }
 }
 

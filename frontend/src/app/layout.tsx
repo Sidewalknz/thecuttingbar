@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../component/Navbar";
 import Footer from "@/component/Footer";
-import { Damion, Anaheim } from "next/font/google";
+import { Sofia, Anaheim } from "next/font/google";
 
-const damion = Damion({
-  weight: "400", // Damion only has one style
+const sub = Sofia({
+  weight: "400", 
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-damion",
+  variable: "--font-sub",
 });
 
-const anaheim = Anaheim({
+const title = Anaheim({
   weight: [
     "400",
     "500",
@@ -21,7 +21,7 @@ const anaheim = Anaheim({
   ],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-anaheim",
+  variable: "--font-title",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${anaheim.variable} ${damion.variable}`}>
+      <body className={`${title.variable} ${sub.variable}`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

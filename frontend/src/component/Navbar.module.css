@@ -4,26 +4,23 @@
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center; /* center container */
+  justify-content: center;
   padding: 1rem 2rem;
   transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
   z-index: 1000;
-
-  /* transparent with slight blur at top */
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(0px);
 }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 0.95); /* almost solid */
-  backdrop-filter: blur(8px); /* soft glassy effect */
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* New wrapper inside navbar */
 .navContent {
   width: 100%;
-  max-width: 1200px; /* keeps content from going too wide */
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,15 +51,141 @@
 
 .cta {
   background: var(--brand-orange);
-  border: none;
-  padding: 0.6rem 1.2rem;
   border-radius: 4px;
+  padding: 0.6rem 1.2rem;
   color: #fff;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
   transition: background 0.2s ease-in-out;
 }
 
 .cta:hover {
-  background: #d95820; /* darker orange on hover */
+  background: #d95820;
+}
+
+/* Burger stays in the same place in both states */
+.burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  position: relative;   /* keep it in the flex row */
+  z-index: 1100;        /* above the dropdown panel */
+  color: var(--foreground);
+}
+
+.burgerBar {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+
+.burgerBar:nth-child(1) { top: 12px; }
+.burgerBar:nth-child(2) { top: 19px; }
+.burgerBar:nth-child(3) { top: 26px; }
+
+/* Open: morph into X, but keep same position */
+.burgerOpen .burgerBar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.5);
+}
+
+.burgerOpen .burgerBar:nth-child(1) {
+  top: 19px;
+  transform: rotate(45deg);
+}
+
+.burgerOpen .burgerBar:nth-child(3) {
+  top: 19px;
+  transform: rotate(-45deg);
+}
+
+/* Mobile dropdown panel */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  transition: transform 0.28s ease;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  z-index: 1000; /* burger is 1100 so it stays above */
+}
+
+.open {
+  transform: translateY(0);
+}
+
+/* Centered logo in dropdown */
+.mobileHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 1rem 10px 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.mobileLogo {
+  line-height: 0;
+  display: inline-block;
+}
+
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 12px 1rem 24px 1rem;
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.mobileList a {
+  display: block;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.mobileList a:hover {
+  color: var(--brand-orange);
+}
+
+.mobileCta {
+  display: inline-block;
+  margin: 0.25rem auto 0;
+  background: var(--brand-orange);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .navLinks { display: none; }
+  .burger { display: inline-block; }
+}
+
+@media (pointer: fine) {
+  .burger:focus-visible,
+  .mobileCta:focus-visible,
+  .navLinks a:focus-visible,
+  .mobileList a:focus-visible,
+  .cta:focus-visible,
+  .mobileLogo:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 2px;
+  }
 }

@@ -14,25 +14,27 @@ export default function Footer() {
             <Image
               src="/logo.svg"
               alt="The Cutting Bar"
-              width={160}
-              height={40}
+              width={240}
+              height={120}
               priority
             />
           </Link>
           <div className={styles.socials}>
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/the_cutting_bar_nelson/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
             >
-              Instagram
+              <img src="/icons/instagram.svg" alt="" className={styles.icon} />
             </a>
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/thecuttingbarnelson/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
             >
-              Facebook
+              <img src="/icons/facebook.svg" alt="" className={styles.icon} />
             </a>
           </div>
         </div>
@@ -40,13 +42,17 @@ export default function Footer() {
         {/* Middle: Contact details */}
         <address className={styles.contact}>
           <p>
-            <a href="tel:03 539 0186">03 539 0186</a>
-            <br />
+            <img src="/icons/phone.svg" alt="" className={styles.icon} />
+            <a href="tel:+6435390186">03 539 0186</a>
+          </p>
+          <p>
+            <img src="/icons/mail.svg" alt="" className={styles.icon} />
             <a href="mailto:info@thecuttingbar.co.nz">
               info@thecuttingbar.co.nz
             </a>
           </p>
           <p className={styles.addr}>
+            <img src="/icons/location.svg" alt="" className={styles.icon} />
             87 Vanguard Street
             <br />
             Nelson 7010, New&nbsp;Zealand

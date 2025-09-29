@@ -7,6 +7,7 @@ export default function ContactCTA() {
   return (
     <section className={styles.contact} aria-labelledby="contact-title">
       <div className={styles.wrap}>
+        <p className={styles.kicker}>Contact</p>
         <h2 id="contact-title" className={styles.title}>
           Ready for your new look?
         </h2>
@@ -23,7 +24,7 @@ export default function ContactCTA() {
             Book Online
           </Link>
 
-          <a href="tel:+64XXXXXXXXX" className={`${styles.btn} ${styles.secondary}`}>
+          <a href="tel:+6435390186" className={`${styles.btn} ${styles.secondary}`}>
             Call Us
           </a>
         </div>
