@@ -24,7 +24,6 @@ export default function Products() {
         <ul className={styles.grid}>
           {products.map(({ name, slug }) => (
             <li key={slug} className={styles.item}>
-              {/* Link to your shop, filter, or info page */}
               <Link
                 href={`/shop?range=${encodeURIComponent(slug)}`}
                 className={styles.link}

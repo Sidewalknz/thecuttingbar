@@ -3,6 +3,7 @@ import Divider from "../component/Divider";
 import Services from "../component/Services";
 import About from "@/component/About";
 import Products from "@/component/Products";
+import ContactCTA from "@/component/ContactCTA";
 
 export default function HomePage() {
   return (
@@ -10,11 +11,10 @@ export default function HomePage() {
       <Hero />
       <Divider />
       <About />
-      <Divider flip />
+      <Divider />
       <Services />
-      <Divider />
       <Products />
-      <Divider />
+      <ContactCTA />
     </>
   );
 }

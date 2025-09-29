@@ -1,8 +1,8 @@
 .services {
   min-height: 70vh;
   padding: 72px 1rem;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--brand-orange); /* match hero */
+  color: #ffffff;
   position: relative;
 
   display: flex;
@@ -26,7 +26,7 @@
 }
 
 .lede {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.92); /* hero-like subtitle color */
   max-width: 52ch;
   margin: 0 auto;
 }
@@ -46,31 +46,30 @@
   }
 }
 
+/* Cards feel native on orange: subtle translucent panel + strong contrast text */
 .card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 18px;
   padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-  border-color: rgba(0,0,0,0.14);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.14);
 }
 
+/* Flip icon treatment so it pops on orange */
 .iconWrap {
   width: 64px;
   height: 64px;
   border-radius: 16px;
-  background: var(--brand-orange);
-  color: #fff;
+  background: #ffffff;            /* was orange */
+  color: var(--brand-orange);     /* icons use currentColor */
   display: grid;
   place-items: center;
-  margin-bottom: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  margin: 0 auto 1rem auto;       /* <-- centers the icon block */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
 .icon {
@@ -83,9 +82,19 @@
   font-size: 1.25rem;
   font-weight: 800;
   margin: 0 0 0.5rem 0;
+  color: #ffffff; /* ensure strong contrast */
 }
 
 .cardBody {
-  color: rgba(0,0,0,0.72);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.55;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card:hover {
+    transition: none;
+    transform: none;
+  }
 }

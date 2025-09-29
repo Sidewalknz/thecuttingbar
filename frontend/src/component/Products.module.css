@@ -1,7 +1,11 @@
 .products {
   padding: 72px 1rem;
-  background: var(--background);
-  color: var(--foreground);
+  background: 
+    linear-gradient(rgba(46,46,46,0.7), rgba(46,46,46,0.7)), /* overlay with opacity */
+    url("/images/texture-black.png") repeat,                  /* texture layer */
+    var(--foreground);                                        /* solid base */
+  background-size: auto; /* change to e.g. 200px if you want scaled texture */
+  color: var(--background); /* flip text color */
 }
 
 .wrap {
@@ -18,7 +22,7 @@
 }
 
 .lede {
-  color: rgba(0,0,0,0.6);
+  color: rgba(255, 255, 255, 0.85); /* softer white against dark */
   max-width: 60ch;
   margin: 0 auto 2rem auto;
 }
@@ -40,16 +44,19 @@
 
 .item {
   border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08); /* translucent tile */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+  backdrop-filter: saturate(140%) blur(6px);
+  -webkit-backdrop-filter: saturate(140%) blur(6px);
 }
 
 .item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-  border-color: rgba(0,0,0,0.14);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
 }
 
 .link {
@@ -77,4 +84,13 @@
 .item:hover .arrow {
   transform: translateX(4px);
   opacity: 1;
+}
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .item:hover {
+    transition: none;
+    transform: none;
+  }
 }
