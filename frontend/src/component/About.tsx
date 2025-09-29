@@ -9,30 +9,35 @@ export default function About() {
       <div className={styles.wrap}>
         <p className={styles.kicker}>About Us</p>
         <h2 id="about-title" className={styles.title}>
-          The Cutting Bar, Nelson
+          The Cutting Bar
         </h2>
         <p className={styles.body}>
-          At The Cutting Bar we provide exceptional service in global colours, balayage,
-          foiling, haircuts and styles for everyone. Experience a relaxed, friendly
-          environment for all your hair needs in Nelson, NZ.
+          The Cutting Bar is owned and operated by Claire Chicken. Originally
+          from the UK, moved over to New Zealand with her partner in 2009. They
+          were only planning to stay for 2 years, but both fell in love with the
+          country and decided to make New Zealand their home.
         </p>
         <p className={styles.body}>
-          You can book your appointment online or give us a call. We take walk-ins when
-          there is availability.
+          After 12 years’ experience in the hairdressing industry, Claire decided
+          that opening The Cutting Bar was the next step in her career. Taking
+          qualities from both salons and barbershops to create a relaxed, friendly
+          environment for everyone.
         </p>
 
         <div className={styles.ctas}>
           <Link
-            href="https://www.fresha.com/a/the-cutting-bar-nelson-87-vanguard-street-hqgw7pdp/booking?menu=true"
-            target="_blank"
+            href="/about"
             className={`${styles.btn} ${styles.primary}`}
           >
-            Book Online
+            Learn More
           </Link>
 
-          <a href="tel:+64XXXXXXXXX" className={`${styles.btn} ${styles.secondary}`}>
-            Call Us
-          </a>
+          <Link
+            href="/careers"
+            className={`${styles.btn} ${styles.secondary}`}
+          >
+            Join Us
+          </Link>
         </div>
       </div>
     </section>

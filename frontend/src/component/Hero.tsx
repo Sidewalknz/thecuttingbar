@@ -13,7 +13,7 @@ export default function Hero() {
         <h1 className={styles.title}>Cut. Colour. Confidence.</h1>
 
         <p className={styles.subtitle}>
-          Lived-in colour, seamless blondes, and sharp cuts—right here in Nelson.
+          Experience a relaxed, friendly environment for all your hair needs in Nelson, NZ.
         </p>
 
         <div className={styles.ctas}>
