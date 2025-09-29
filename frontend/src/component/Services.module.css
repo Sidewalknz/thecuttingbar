@@ -1,15 +1,19 @@
 .services {
   min-height: 70vh;
   padding: 72px 1rem;
-  background: var(--brand-orange); /* match hero */
   color: #ffffff;
   position: relative;
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
-  text-align: center;      /* keep text centered */
+  justify-content: center; 
+  align-items: center;    
+  text-align: center;    
+
+  background: 
+  linear-gradient(rgba(46,46,46,0.7), rgba(46,46,46,0.7)), /* overlay with opacity */
+  url("/images/texture-black.png") repeat,                  /* texture layer */
+  var(--foreground);    
 }
 
 .header {
@@ -26,7 +30,7 @@
 }
 
 .lede {
-  color: rgba(255, 255, 255, 0.92); /* hero-like subtitle color */
+  color: rgba(255, 255, 255, 0.92); 
   max-width: 52ch;
   margin: 0 auto;
 }
@@ -54,22 +58,16 @@
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-  border-color: rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.14);
 }
 
 /* Flip icon treatment so it pops on orange */
 .iconWrap {
   width: 64px;
   height: 64px;
-  border-radius: 16px;
-  background: #ffffff;            /* was orange */
   color: var(--brand-orange);     /* icons use currentColor */
   display: grid;
   place-items: center;
   margin: 0 auto 1rem auto;       /* <-- centers the icon block */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
 .icon {

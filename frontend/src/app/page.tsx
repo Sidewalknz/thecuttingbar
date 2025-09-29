@@ -11,10 +11,13 @@ export default function HomePage() {
       <Hero />
       <Divider />
       <About />
-      <Divider />
+      <Divider flip />
       <Services />
+      <Divider />
       <Products />
+      <Divider />
       <ContactCTA />
+      <Divider flip />
     </>
   );
 }
