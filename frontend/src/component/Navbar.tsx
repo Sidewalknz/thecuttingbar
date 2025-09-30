@@ -45,7 +45,7 @@ export default function Navbar() {
           <li><Link href="/shop">Shop</Link></li>
           <li><Link href="/contact">Contact</Link></li>
           <li>
-            <Link href="/book" className={styles.cta}>Book Now</Link>
+            <Link href="https://www.fresha.com/a/the-cutting-bar-nelson-87-vanguard-street-hqgw7pdp/booking?menu=true" className={styles.cta}>Book Now</Link>
           </li>
         </ul>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
           <li><Link href="/about">About</Link></li>
           <li><Link href="/shop">Shop</Link></li>
           <li><Link href="/contact">Contact</Link></li>
-          <li><Link href="/book" className={styles.mobileCta}>Book Now</Link></li>
+          <li><Link href="https://www.fresha.com/a/the-cutting-bar-nelson-87-vanguard-street-hqgw7pdp/booking?menu=true" className={styles.mobileCta}>Book Now</Link></li>
         </ul>
       </div>
     </nav>
