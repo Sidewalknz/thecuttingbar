@@ -1,0 +1,42 @@
+[
+  {
+    "id": "claire",
+    "name": "Claire",
+    "role": "Owner",
+    "image": "/staff/claire.webp",
+    "bookingUrl": "https://www.fresha.com/book-now/the-cutting-bar-lwi24o4v/services?lid=68528&eid=189067&pId=63747",
+    "bio": "Claire started her hairdressing career in the UK in 2005. She mainly did colour work while working in salons on the South Coast. After moving to New Zealand, Claire managed a barbershop for several years before opening The Cutting Bar. This is where she found her passion for cutting, but she always missed doing colour work—opening the business has allowed her to combine her favourite aspects of salons and barbershops. She is passionate about the hairdressing industry and thrives on learning new techniques and skills."
+  },
+  {
+    "id": "vanessa",
+    "name": "Vanessa",
+    "role": "Assistant Manager",
+    "image": "/staff/vanessa.webp",
+    "bookingUrl": "https://www.fresha.com/book-now/the-cutting-bar-lwi24o4v/services?lid=68528&eid=550458&pId=63747",
+    "bio": "Vanessa is originally from Golden Bay where she did her hairdressing training. She now has over 20 years’ experience working in salons and barbershops in Australia and New Zealand. She is great at cutting men’s hair and ladies’ short funky styles. She also understands that not every client likes to talk lots, so if you prefer a quieter haircut Vanessa is the one to book with."
+  },
+  {
+    "id": "siobahn",
+    "name": "Siobahn",
+    "role": "Master Stylist",
+    "image": "/staff/siobahn.webp",
+    "bookingUrl": "https://www.fresha.com/book-now/the-cutting-bar-lwi24o4v/services?lid=68528&eid=930371&pId=63747",
+    "bio": "Siobahn is our local girl. She has lived in Nelson for most of her life and has almost 20 years’ experience from salons in Nelson and Christchurch. Siobahn is our colour expert! She is always up for a challenge with colour correction, and she loves creating beautiful hairstyles. Long hair and blondes are her favourite, but she gets creative with anyone in her chair. She is passionate about making people look and feel good. Siobahn has a fun, caring personality and always likes to have a laugh."
+  },
+  {
+    "id": "maureen",
+    "name": "Maureen",
+    "role": "Senior Stylist",
+    "image": "/staff/maureen.webp",
+    "bookingUrl": "https://www.fresha.com/book-now/the-cutting-bar-lwi24o4v/services?lid=68528&eid=1978098&pId=63747",
+    "bio": "Maureen worked in Queenstown for 4 years when she first arrived in New Zealand from South Africa. She has been hairdressing since 2005 and really enjoys cutting, blow drying, and Keratin Straightening. Since starting at The Cutting Bar in September 2022, Maureen has completed her Master's of Balayage course and is continuing to upskill using new techniques and products from our preferred brand Keune Haircare. Maureen is passionate about her craft, which shows in her work, and loves making people look and feel amazing."
+  },
+  {
+    "id": "juanessa",
+    "name": "Juanessa",
+    "role": "Senior Stylist",
+    "image": "/staff/juanessa.webp",
+    "bookingUrl": "https://www.fresha.com/book-now/the-cutting-bar-lwi24o4v/services?lid=68528&eid=3030952&pId=63747",
+    "bio": "Meet Juanessa, who joined our team in July this year—a talented stylist with 12 years of experience in the hairdressing industry. Originally from the Bay of Plenty, where she completed her hairdressing training, Juanessa moved to Southland before making Nelson her home for the past five years. She has a passion for all colour work from balayage to global and takes great pride in seeing the stunning finished results of her creations."
+  }
+]

@@ -1,0 +1,127 @@
+.hero {
+  position: relative;
+  min-height: 50vh;
+  padding: 80px 1rem;
+
+  /* White brick texture */
+  background:
+    url("/images/texture-white.png") repeat,
+    #ffffff;
+
+  color: var(--foreground);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* allow logo overlay to stay contained */
+}
+
+/* Hero Logo Overlay */
+.heroLogo {
+  position: absolute;
+  bottom: -540px;
+  left: 50%;
+  width: 1600px;
+  height: 1200px;
+  background: url("/icons/hero-logo.svg") no-repeat left bottom;
+  background-size: auto 1200px;
+  z-index: 0;
+  opacity: 0.12;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1; /* keep content above logo */
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* kicker + title */
+.kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sub), cursive;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-title), sans-serif;
+  text-transform: uppercase;
+}
+
+/* body copy supports multiple paragraphs */
+.body {
+  margin: 0 auto 1rem auto;
+  max-width: 65ch;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.75);
+}
+
+/* CTAs */
+.ctas {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.primary {
+  background: #ffffff;
+  color: var(--foreground);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.primary:hover {
+  background: #f7f7f7;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.16);
+}
+
+.secondary {
+  background: transparent;
+  color: var(--foreground);
+  border: 2px solid rgba(0,0,0,0.2);
+}
+.secondary:hover {
+  border-color: var(--foreground);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .heroLogo {
+    width: 220%;
+    left: 130%;
+    bottom: -250px;
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero { padding: 64px 1rem; }
+  .title { font-size: 1.75rem; }
+}
